@@ -13,9 +13,7 @@ end
 def merge(left, right)
   merged = []
 
-  while !left.empty? && !right.empty?
-    merged << (left.first < right.first ? left.shift : right.shift)
-  end
+  merged << (left.first < right.first ? left.shift : right.shift) while !left.empty? && !right.empty?
   merged.concat(left).concat(right)
 end
 
